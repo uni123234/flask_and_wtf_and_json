@@ -1,0 +1,24 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.env/
+
+# Flask-specific
+instance/
+*.log
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+
+# Node modules (if you are using front-end tools)
+node_modules/

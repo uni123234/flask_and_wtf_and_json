@@ -1,17 +1,38 @@
-from flask import Flask, template_rendered, request
+"""
+This module sets up a basic Flask application with search functionality.
+
+It includes:
+- A search form rendered from 'search.html'.
+- A search result page that displays the search term.
+"""
+
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 
-@app.route('/search/')
+@app.route("/search/")
 def flask_search():
-    return template_rendered('search.html')
+    """
+    Renders the search form page.
+
+    Returns:
+        str: Rendered HTML for the search form.
+    """
+    return render_template("search.html")
 
 
-@app.route('/dosearch/')
+@app.route("/dosearch/")
 def flask_dosearch():
-    s = request.args.get("s")
-    return f'Пошук по {s}'
+    """
+    Handles search queries and returns a result page with the search term.
+
+    Returns:
+        str: Message with the search term.
+    """
+    search_term = request.args.get("s")
+    return f"Пошук по {search_term}"
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
