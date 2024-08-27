@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form action="/cars" method="post">
+			<p>{{form.model.label}} {{form.model}}</p>
+			<p>{{form.price.label}} {{form.price}}</p>
+			<p>{{form.gearbox.label}} {{form.gearbox}}</p>
+			<p>{{form.color.label}} {{form.color}}</p>
+			{{form.submit}}
+		</form>
+	</body>
+</html>
